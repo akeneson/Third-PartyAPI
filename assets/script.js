@@ -12,10 +12,13 @@ $(document).ready(function () {
             console.log(hourNow);
             console.log(block);
             if (hourNow > block) {
+                // the addClass function, adds that class into ".time-block", which will style the row with the colors accordingly. This one will be gray
                 $(this).addClass("past");
             } else if (hourNow == block) {
+                // this one will be red
                 $(this).addClass("present");
             } else {
+                // this one will be green
                 $(this).addClass("future");
             }
         });
