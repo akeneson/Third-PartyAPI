@@ -22,13 +22,19 @@
     <p id="currentDay" class="lead"></p>
   </header>
 
-  <div class="container">
+  <!-- Table vs div classes discussed. Tables are not responsive -->
 
+  <div class="container">
+  
+    <!-- add all style properties into the class -->
     <div class="row time-block" id="9">
+      <!-- add space to center text content -->
       <div class="col-1 hour">
         0900
       </div>
+      <!-- text area -->
       <textarea class="col-10 description"> </textarea>
+      <!-- button -->
       <button class="col-1 saveBtn">Save</button>
     </div>
 
@@ -50,74 +56,9 @@
 
 
 
-
-
-
-
-
-    <!-- <table class="table"> -->
-
-
-    <!-- <thead>
-        <tr>
-          <!The scope attribute specifies that this is a header for a column -->
-    <!-- column that displays the hour -->
-    <!-- <th scope="col">Hour</th> -->
-    <!-- column that displays what's on the schedule -->
-    <!-- <th scope="col">Schedule</th> -->
-    <!-- this column contains the savebtn -->
-    <!-- <th scope="col"></th>
-        </tr>
-      </thead>  -->
-    <!-- <tbody> -->
-    <!-- <tr class="row time-block" id="09">
-          <td class="hour">0900</td>
-          <td>
-            <form>
-              <div class="form-group">
-                <input type="schedule" class="form-control description" id="schedule" aria-describedby="schedule"
-                  placeholder="But first, Coffee">
-              </div>
-            </form>
-          </td>
-          <td id="savebtn"><button class="saveBtn" id="saveBtn">SAVE</button></td>
-        </tr> -->
-    <!-- 1900 hour -->
-    <!-- <tr class="row time-block" id="19">
-          <td class="hour">1900</td>
-          <td>
-            <form>
-              <div class="form-group">
-                <input type="schedule" class="form-control description" id="schedule" aria-describedby="schedule"
-                  placeholder="But first, Coffee">
-              </div>
-            </form>
-          </td> -->
-    <!-- <td id="savebtn"><button class="saveBtn" id="saveBtn">SAVE</button></td>
-        </tr>
-        <tr class="row time-block">
-          <td class="hour" id="20">2000</td>
-          <td>
-            <form>
-              <div class="form-group">
-                <input type="schedule" class="form-control description" id="schedule" aria-describedby="schedule"
-                  placeholder="But first, Coffee">
-              </div>
-            </form>
-          </td>
-          <td id="savebtn"><button class="saveBtn" id="saveBtn">SAVE</button></td>
-        </tr> -->
-
-    <!-- add more rows here -->
-
-    <!-- </tbody>
-    </table>  -->
   </div>
-
-
-
   </div>
-
+<!-- ALWAYS ALWAYS put edited files at the bottom, this is why my page through an error -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="assets/script.js"></script>
