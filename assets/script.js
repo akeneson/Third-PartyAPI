@@ -27,19 +27,24 @@ $(document).ready(function () {
     // display current day
     $("#currentDay").append(moment().format('dddd ll'));
 
-    // picking the class variable from this block whenm the saveBtn is clicked
+    // picking the class variable from this block when the saveBtn is clicked
     $(".saveBtn").click(function () {
+        // saveBtn is the singling of description --- which holds the value
         var savedValue = $(this).siblings(".description").val();
+        // but the id is stored in the parent of the columns, which is the row.
         var savedTime = $(this).parent().attr("id");
         // if something is there, save into saveTodo, if not create an empty array
-        // saveTodo was created here as well in the same line as the obj.
+        // saveTodo was created here in the same line as thiscobj was created.
         var obj = JSON.parse(window.localStorage.getItem("saveTodo")) || [];
+        // this function, takes the obj, and push it into an object to call from. Organization.
         obj.push({
             time: savedTime,
             value: savedValue
         })
-
+        // this get the item, "saveTodo", and sets the item into the string
         window.localStorage.setItem("saveTodo", JSON.stringify(obj));
+        
+        // checks to see if the save button worked
         $(".time-block").each(function (index) {
             console.log(savedValue);
             console.log(savedTime);
