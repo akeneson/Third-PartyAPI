@@ -1,6 +1,4 @@
 
-
-
 // remember this ready function, because it doesn't reload the page. Everything inside this function.
 $(document).ready(function () {
     var rightNow = moment().toString('MMMM Do YYYY, h:mm:ss a');
@@ -22,6 +20,9 @@ $(document).ready(function () {
             }
         });
     }
+
+    // display current day
+    $("#currentDay").append(moment().format('dddd ll'));
 
     // picking the class variable from this block whenm the saveBtn is clicked
     $(".saveBtn").click(function () {
@@ -61,41 +62,3 @@ $(document).ready(function () {
     hour();
 
 })
-
-
-
-// $("#currentDay").html(rightNow);
-
-
-
-
-
-
-
-
-
-    // from 9am to 5pm
-    // 9am "But first, coffee"
-    // 12pm Lunch
-    // 5pm  "Happy Hour"
-
-
-// need to store text to local drive
-
-
-
-// function hours()
-// {
-
-// }
-
-// need color to change 
-    // past();
-    //     if (rightNow.hour> hour)
-    //         style text area gray;
-    // present();
-    //     if (rightNow.hour ==hour)
-    //         style text area red;
-    // future();
-    //     if (rightNow.hour < hour)
-    //         style text area green
