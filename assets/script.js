@@ -34,14 +34,14 @@ $(document).ready(function () {
         // but the id is stored in the parent of the columns, which is the row.
         var savedTime = $(this).parent().attr("id");
         // if something is there, save into saveTodo, if not create an empty array
-        // saveTodo was created here in the same line as this obj was created.
+        // saveTodo was created here in the same line as this obj was created. pull it from local storage.
         var obj = JSON.parse(window.localStorage.getItem("saveTodo")) || [];
         // this function, takes the obj, and push it into an object to call from. Organization.
         obj.push({
             time: savedTime,
             value: savedValue
         })
-        // this get the item, "saveTodo", and sets the item into the string
+        // this get the item, "saveTodo", and sets the item into the string. push to local.
         window.localStorage.setItem("saveTodo", JSON.stringify(obj));
         
         // checks to see if the save button worked
@@ -51,7 +51,7 @@ $(document).ready(function () {
 
         })
     })
-    // get the items from the array
+    // get the items from the array. push to local
     let saveItems = JSON.parse(localStorage.getItem("saveTodo"))
     console.log(saveItems);
 
