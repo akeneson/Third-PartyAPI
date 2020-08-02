@@ -34,7 +34,7 @@ $(document).ready(function () {
         // but the id is stored in the parent of the columns, which is the row.
         var savedTime = $(this).parent().attr("id");
         // if something is there, save into saveTodo, if not create an empty array
-        // saveTodo was created here in the same line as thiscobj was created.
+        // saveTodo was created here in the same line as this obj was created.
         var obj = JSON.parse(window.localStorage.getItem("saveTodo")) || [];
         // this function, takes the obj, and push it into an object to call from. Organization.
         obj.push({
